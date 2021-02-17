@@ -8,9 +8,15 @@ Note: this repository (via `poetry new learn_spark`) comes with the file `README
 - [Formatting and Dependency Management Inspiration](#inspiration)
 1. [Ratings Counter](#ratings-counter)
 
+## Ratings Counter
+
+This is the first running script, as part of Frank Kanes "Taming Big Data with Apache Spark and Python".
+
+Code in directory: `learn_spark/ratings_counter/ratings-counter.py`
+
 ## Setup
 
-### Apache Spark
+#### Apache Spark
 
 Installed via brew... `brew install apache-spark`
 
@@ -34,7 +40,7 @@ install-on-request: 3,760 (30 days), 10,435 (90 days), 55,755 (365 days)
 build-error: 0 (30 days)
 ```
 
-### Java
+#### Java
 
 I don't remember how I installed this...(I also have java14 installed but 11 is my default)
 
@@ -45,7 +51,7 @@ OpenJDK Runtime Environment 18.9 (build 11.0.2+9)
 OpenJDK 64-Bit Server VM 18.9 (build 11.0.2+9, mixed mode)
 ```
 
-### Poetry
+#### Poetry
 
 [Poetry Installation Guide, via python-poetry.org](https://python-poetry.org/docs/#installation)
 
@@ -54,7 +60,7 @@ $ poetry --version
 Poetry version 1.1.4
 ```
 
-### Python
+#### Python
 
 Version of python via virtualenv... I think
 
@@ -73,11 +79,3 @@ Yaadi is a P.O.S. but I he told me to reference [his repo](https://github.com/Yd
   - looks like Yaadi doesn't even format with this often but it's nice and succint
 - Python-Dotenv and Config.py
   - using a dotenv file is good practice something I should get used to
-
-## Ratings Counter
-
-This is the first running script, as part of Frank Kanes "Taming Big Data with Apache Spark and Python".
-
-Code in directory: `learn_spark/ratings_counter/ratings-counter.py`
-
-

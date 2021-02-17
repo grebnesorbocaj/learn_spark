@@ -4,9 +4,9 @@ Note: this repository (via `poetry new learn_spark`) comes with the file `README
 
 ## Index
 
-- [Setup](#-Setup)
-- [Formatting and Dependency Management Inspiration](#-Inspiration)
-1. [Ratings Counter](#-Ratings-Counter)
+- [Setup](#setup)
+- [Formatting and Dependency Management Inspiration](#inspiration)
+1. [Ratings Counter](#ratings-counter)
 
 ## Setup
 

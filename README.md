@@ -16,6 +16,12 @@ Code in directory: `learn_spark/ratings_counter/ratings-counter.py`
 
 ## Setup
 
+#### .env
+
+The .env-template should be renamed to .env and the contents should be altered to fit the locations of data in your personal computer.
+
+.env values are referenced in `learn_spark/config.py` which is referened in applications rather than hardcoded filepaths.
+
 #### Apache Spark
 
 Installed via brew... `brew install apache-spark`

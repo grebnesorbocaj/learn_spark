@@ -46,6 +46,18 @@ install-on-request: 3,760 (30 days), 10,435 (90 days), 55,755 (365 days)
 build-error: 0 (30 days)
 ```
 
+Note that I had issues with INFO continuing to be displayed in logs, making for very verbose logging. To fix:
+
+```shell
+export SPARK_HOME=/usr/local/Cellar/apache-spark/3.0.1/libexec
+```
+
+And in SPARK_HOME, cd to the `conf/` directory. Do the following and inside `log4j.properties` change INFO to ERROR at the log4j.rootCategory line.
+
+```shell
+cp log4j.properties.template log4j.properties
+```
+
 #### Java
 
 I don't remember how I installed this...(I also have java14 installed but 11 is my default)

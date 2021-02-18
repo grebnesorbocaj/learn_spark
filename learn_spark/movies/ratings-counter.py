@@ -5,9 +5,7 @@ import collections
 
 
 def ratings_counter(sc: SparkContext):
-    lines = sc.textFile(
-        f"{BaseConfig.DATA_FOLDER}/{BaseConfig.MOVIE_LENS_FOLDERS}/u.data"
-    )
+    lines = sc.textFile(f"{BaseConfig.DATA_FOLDER}/{BaseConfig.MOVIE_LENS_FOLDERS}/u.data")
     ratings = lines.map(lambda x: x.split()[2])
     result = ratings.countByValue()
 

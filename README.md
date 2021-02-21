@@ -22,6 +22,10 @@ The .env-template should be renamed to .env and the contents should be altered t
 
 .env values are referenced in `learn_spark/config.py` which is referenced in applications rather than hardcoded filepaths.
 
+#### hooks/
+
+I added a pre-commit hook which will run `poetry run black $file` on python files staged for commits. To use this in your repo, run `cp pre-commit.template ../.git/hooks/pre-commit` from the /hooks/ directory. Hopefully that works.
+
 #### Apache Spark
 
 Installed via brew... `brew install apache-spark`

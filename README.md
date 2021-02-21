@@ -24,7 +24,7 @@ The .env-template should be renamed to .env and the contents should be altered t
 
 #### hooks/
 
-I added a pre-commit hook which will run `poetry run black $file` on python files staged for commits. To use this in your repo, run `cp pre-commit.template ../.git/hooks/pre-commit` from the /hooks/ directory. Hopefully that works.
+I added a pre-commit hook which will run `poetry run black $file` on python files staged for commits. To use this in your repo, run `cp pre-commit.template ../.git/hooks/pre-commit && chmod +x ../.git/hooks/pre-commit` from the /hooks/ directory. Hopefully that works.
 
 #### Apache Spark
 

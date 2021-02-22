@@ -1,6 +1,7 @@
 from pyspark import SparkConf, SparkContext
 from learn_spark.config import BaseConfig
 from learn_spark.utils.runner import run_local
+from learn_spark.utils.sorting import sortedResults
 import collections
 
 
@@ -20,11 +21,10 @@ def count_friends_by_age(sc):
         lambda x, y: (x[0] + y[0], x[1] + y[1])
     )
     averagesByAge = totalsByAge.mapValues(lambda x: x[0] / x[1])
-    results = averagesByAge.collect()
+    results = sortedResults(averagesByAge)
 
-    sortedResults = collections.OrderedDict(sorted(results))
     print("age\t->\t# of friends")
-    for key, value in sortedResults.items():
+    for key, value in results.items():
         print(f"{key}\t->\t{value}")
 
 

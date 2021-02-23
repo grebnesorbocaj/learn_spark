@@ -28,16 +28,17 @@ def parseLine(line):
     spent = float(fields[2])
     return (custId, spent)
 
+
 def spending_per_customer(sc):
     lines = sc.textFile(
         f"{BaseConfig.DATA_FOLDER}/{BaseConfig.CONSUMER_SPENDING}/customer-orders.csv"
     )
 
     purchaseRecords = lines.map(parseLine)
-    
-    customerSpending = purchaseRecords.reduceByKey(lambda x, y: x+y)
 
-    results = sortedResults(customerSpending, by='floatVal')
+    customerSpending = purchaseRecords.reduceByKey(lambda x, y: x + y)
+
+    results = sortedResults(customerSpending, by="floatVal")
 
     print("word\t->\tcount")
     for custId, spending in results.items():

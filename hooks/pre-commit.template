@@ -8,10 +8,11 @@
 # To enable this hook, rename this file to "pre-commit".
 
 files=$(git diff --cached --name-only)
+fileType=".py"
 
 for file in $files
 do
-if file --mime-type "$file" | grep "python"; then
+if [[ "$file" == *"$fileType"* ]]; then
 	echo "Python file, reformatted by Black: $file"
 	poetry run black $file
 	git add $file	
@@ -20,4 +21,3 @@ else
 	git add $file
 fi
 done
-

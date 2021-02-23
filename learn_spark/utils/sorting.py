@@ -10,6 +10,10 @@ def sortedResults(rdd, by="key"):
         results = rdd.collect()
         valueKeySort = collections.OrderedDict(sorted(results, key=lambda x: int(x[1])))
         return valueKeySort
+    elif by == "floatVal":
+        results = rdd.collect()
+        valueKeySort = collections.OrderedDict(sorted(results, key=lambda x: float(x[1])))
+        return valueKeySort
 
 def cleanString(text: str):
     """

@@ -6,13 +6,6 @@ Note: this repository (via `poetry new learn_spark`) comes with the file `README
 
 - [Setup](#setup)
 - [Formatting and Dependency Management Inspiration](#inspiration)
-1. [Ratings Counter](#ratings-counter)
-
-## Ratings Counter
-
-This is the first running script, as part of Frank Kanes "Taming Big Data with Apache Spark and Python".
-
-Code in directory: `learn_spark/ratings_counter/ratings-counter.py`
 
 ## Setup
 
